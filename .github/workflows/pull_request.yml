@@ -1,12 +1,12 @@
-name: Build and Deploy
+name: Pull Request
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
 jobs:
-  build:
+  verify:
     runs-on: windows-latest
     steps:
       - name: Checkout repository
@@ -28,8 +28,3 @@ jobs:
 
       - name: Build app
         run: npm run build
-
-      - name: Trigger Netlify Deploy
-        uses: ./.github/workflows/deploy_netifly.yml
-        with:
-          deploy-netlify: true
