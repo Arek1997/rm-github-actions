@@ -6,3 +6,4 @@ runs:
   steps:
     - name: Run unit tests
       run: npm run test
+      shell: bash
