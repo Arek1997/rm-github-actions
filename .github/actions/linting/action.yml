@@ -4,5 +4,10 @@ description: Linting code
 runs:
   using: 'composite'
   steps:
+    - name: Configure node
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+
     - name: Lint code
       run: npm run lint
