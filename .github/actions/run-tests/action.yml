@@ -1,0 +1,8 @@
+name: Testing
+description: Running tests
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run unit tests
+      run: npm run test

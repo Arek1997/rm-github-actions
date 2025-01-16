@@ -16,10 +16,10 @@ jobs:
         uses: ./.github/actions/setup-project
 
       - name: Lint code
-        run: npm run lint
+        uses: ./.github/actions/linting
 
-      - name: Execute unit tests
-        run: npm run test
+      - name: Run tests
+        uses: ./.github/actions/run-tests
 
       - name: Build app
         run: npm run build

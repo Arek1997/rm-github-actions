@@ -1,0 +1,8 @@
+name: Linting
+description: Linting code
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Lint code
+      run: npm run lint
